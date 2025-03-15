@@ -1,0 +1,484 @@
+
+
+SETS:
+  a. Set Properities
+  b. Set Items Accessable
+  c. Add item
+  d. Remove item
+  e. Iterate set item
+  f. Operation on set items
+
+
+ Set Properities:
+  Sets are used to store multiple items in a single variable
+  Sets are written in curly brackes.
+      {Items}
+
+
+  Arrays Vs Sets: Sets are unordered,unchangle and no duplicates. Where as in arrays are indexble,changable,duplicates
+
+
+  set1={1,2,3,4,5}
+
+   print(set1)
+
+  Output:
+     {1, 2, 3, 4, 5}
+
+
+ Set Items:
+       Set items are unordered,unchangable and no duplicates values.
+
+         Unordered: Do not have defined orders
+         set1={1,2,3} 
+         print(set1) :
+             {1,2,3} or {3,2,1}  etc
+
+        Unchangable:
+           set1[2]=6 . Not allowed. 
+           We cannot change the items after set has been created.
+
+       No Duplicates:
+           {1,2,3,2} print(set1)-->{1,2,3}
+
+  Prog1:
+   set1={'a','b','c','d','e'}
+   print(set1)
+   Output for 1st run: {'e', 'a', 'd', 'b', 'c'}
+   Output for 2nd run: {'d', 'a', 'c', 'e', 'b'}
+
+  set1[2]='t'
+ Error:
+ {'d', 'b', 'e', 'a', 'c'}
+ 
+    set1[2]='t'
+    TypeError: 'set' object does not support item assignment
+
+ Prog2:
+ set1={'a','a','b','b','c','c','d','d'}
+
+  print(set1)
+
+   print("Length of set1:",len(set1))
+
+  Output:
+
+   {'b', 'c', 'd', 'a'}
+   Length of set1: 4
+
+ Set items can be of any data type:
+   set1={1,2,3,4,5}  -Integers
+   set2={'abc','def','ghi'} - Strings
+   set3={False,True,True}
+
+  set4={2,'a','ABC',True,3.5}
+
+  Set are defined as objects with the data type "set".
+
+  Prog:
+  set1={2,4,6,8,10} #Integer data type sets
+set2={2.5,3.5,6.7} #float data type sets
+set3={'a','b','c','d','e'} #character data type sets
+set4={'abc','def','ghi','LMN'} # string data type sets
+set5={True,False,True,False}
+
+print("Int items:",set1)
+print("Int items:",set2)
+print("Int items:",set3)
+print("Int items:",set4)
+print("Boolean items:",set5)
+
+
+set6={2,2,5,'a','xyz',True}
+print("Any Data Types:",set6)
+
+print()
+print(type(set1))
+print(type(set2))
+print(type(set3))
+print(type(set4))
+print(type(set5))
+print(type(set6))
+
+Output:
+ Int items: {2, 4, 6, 8, 10}
+Int items: {2.5, 3.5, 6.7}
+Int items: {'c', 'a', 'd', 'b', 'e'}
+Int items: {'def', 'ghi', 'abc', 'LMN'}
+Boolean items: {False, True}
+Any Data Types: {True, 2, 5, 'a', 'xyz'}
+<class 'set'>
+<class 'set'>
+<class 'set'>
+<class 'set'>
+<class 'set'>
+<class 'set'>
+
+
+Accessing Items: 
+  for i in set:
+     print(item)
+  
+  print(2 in set1)
+
+Prog: 
+  set6={2,2,5,2.5,'a','xyz',True}
+
+set={1,2,3,4};
+
+
+
+
+for i in set6:
+    print(i,end=' ')
+
+print()    
+    
+if(2 in set):
+    print("True part")
+    
+print(8 in set)
+
+print(2 in set)
+
+ Output:
+  True 2 2.5 5 a xyz 
+  True part
+  False
+  True
+
+
+Adding items to sets:
+   By using add(item) method.
+
+ Adding Sets:
+  To add items from another set into current set by using update() method.
+
+  set1={1,2,3,4};
+
+print(set1)
+
+set1.add(5)
+
+
+print(set1)
+
+set1={1,2,3,4}
+set2={5,6,7}
+
+
+set1.update(set2)# set1=set1+set2
+
+print('After update set1 ',set1)
+print('After update set2',set2)
+
+Removals:
+  Remove():
+  Discard():  To remove the item in the set.
+              Remove: If item does not exist , it will raise an error
+              Discard: If item does not exist, it will not raise an error
+
+  Prog:
+   
+set1={'a','b','c','d'}
+print('Before Removal:',set1)
+set1.remove('a')
+print("After Removal:",set1)
+
+set1.remove('e') # Try to remove non existing element 
+print("After Removal of non existing ele:",set1)
+  
+  Output:
+     Before Removal: {'c', 'd', 'b', 'a'}
+     After Removal: {'c', 'd', 'b'}
+     Traceback (most recent call last):
+     File "main.py", line 9, in <module>
+    set1.remove('e') # Try to remove non existing element 
+    KeyError: 'e'
+
+
+ Prog2:
+  set1={'a','b','c','d'}
+
+print("Before discard:",set1)
+set1.discard('b')
+print("After  discard:",set1)
+
+
+print("Before discard non existing one:",set1)
+set1.discard('e')
+print("After discard non existing one:",set1)
+
+ Output:
+   Before discard: {'d', 'b', 'a', 'c'}
+   After  discard: {'d', 'a', 'c'}
+   Before discard non existing one: {'d', 'a', 'c'}
+   After discard non existing one: {'d', 'a', 'c'}
+
+pop():  Sets are unordered, does not guarantee what item get removed.
+        But it return the deleted item value.
+
+  set1={'a','b','c','d'}
+
+ret=set1.pop()
+print(ret)
+
+
+ret=set1.pop()
+print(ret)
+
+
+ret=set1.pop()
+print(ret)
+
+
+ret=set1.pop()
+print(ret)
+
+
+ret=set1.pop()
+print(ret)
+
+ Output:
+  b
+a
+d
+c
+  Traceback (most recent call last):
+  File "main.py", line 23, in <module>
+    ret=set1.pop()
+    KeyError: 'pop from an empty set'
+
+
+Prog3:
+ Clear: Empty set definition exists.
+ del  : Empty set definition does not exists.
+
+
+  set1={'a','b','c','d'}
+  print("Before Empty:",set1)
+  set1.clear()
+  print("After empty:",set1)
+
+ Output:
+  Before Empty: {'a', 'b', 'd', 'c'}
+  After empty: set()
+
+
+Prog4:
+
+  print("Before Del:",set1)
+set1={'a','b','c','d'}
+del set1
+
+print("After Del:",set1)
+
+ Output:
+  Before Del: {'b', 'a', 'c', 'd'}
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    print("After Del:",set1)
+NameError: name 'set1' is not defined
+
+
+More Operations on SETS:
+
+  Union:
+  Update: 
+     Method used to join two or more sets.
+       Ex: set1={1,2,3,11}
+           set2={11,12,13,2}
+     
+   Union requires on more set to store the result.
+      set3=set1.union(set2)
+   Update can be done on existing set
+     set1.update(set2)
+
+   Both Union and Update will exclude the Duplicate values
+
+ Prog:
+   print("Union")
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+set3={4,5,6,7}
+
+print("Before union")
+print('set1:',set1)
+print('set2:',set2)
+print('set3:',set3)
+
+
+set4=set1.union(set2,set3)
+
+print("After union")
+
+print(set1)
+print(set2)
+print(set3)
+print(set4)
+
+print("Update")
+
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+set3={4,5,6,7}
+
+print("Before Update")
+print('set1:',set1)
+print('set2:',set2)
+print('set3:',set3)
+
+
+set3.update(set1,set2)
+print("After Update")
+print(set1)
+print(set2)
+print(set3)
+
+ Output:
+   Union
+Before union
+set1: {1, 2, 3, 5}
+set2: {2, 4, 5, 11, 12, 13}
+set3: {4, 5, 6, 7}
+After union
+{1, 2, 3, 5}
+{2, 4, 5, 11, 12, 13}
+{4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7, 11, 12, 13}
+Update
+Before Update
+set1: {1, 2, 3, 5}
+set2: {2, 4, 5, 11, 12, 13}
+set3: {4, 5, 6, 7}
+After Update
+{1, 2, 3, 5}
+{2, 4, 5, 11, 12, 13}
+{1, 2, 3, 4, 5, 6, 7, 11, 12, 13}
+
+
+
+  Intersection:
+  Intersection Update: Common values between sets.
+
+    Both are same but normal intersection needed third set variable to store the result.
+    Where as Intersection Update, not needed any third set variable to store the result.
+
+      
+# Online Python - IDE, Editor, Compiler, Interpreter
+print("Intersection")
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+set3={4,5,6,7}
+
+print("Before Intersection")
+print('set1:',set1) # set1: {1, 2, 3, 5}
+print('set2:',set2) # set2: {2, 4, 5, 11, 12, 13}
+print('set3:',set3) # set3: {4, 5, 6, 7}
+
+set4=set1.intersection(set2,set3)
+
+print("After Intersection")
+
+print(set1) #{1, 2, 3, 5}
+print(set2) #{2, 4, 5, 11, 12, 13}
+print(set3) #{4, 5, 6, 7}
+print(set4) # {5}
+
+print("Update Intersection")
+
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+set3={4,6,7}
+
+print("Before Update Intersection")
+print('set1:',set1) # set1: {1, 2, 3, 5}
+print('set2:',set2) # set2: {2, 4, 5, 11, 12, 13}
+print('set3:',set3) # set3: {4, 6, 7}
+
+
+set3.intersection_update(set1,set2)
+print("After Update Int")
+print(set1) # {1, 2, 3, 5}
+print(set2) # {2, 4, 5, 11, 12, 13}
+print(set3) #set() - Empty set because no common
+
+ Symmetric Difference:
+     symmetric_difference():
+     symmetric_difference_update():
+            set1={1,2,3,4,5}
+            set2={11,4,12,3}
+
+            set3=set1.symmetric_difference(set2)---{1,2,3,4,5,11,12}
+            set1.symmetric_difference_update(set2)-- {1,2,3,4,5,11,12}
+
+      TypeError: symmetric_difference() takes exactly one argument (2 given)
+
+ Prog:
+   
+# Online Python - IDE, Editor, Compiler, Interpreter
+print("Symmetric difference")
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+
+
+
+print("Before symmetric difference")
+print('set1:',set1) # set1: {1, 2, 3, 5} #set1: {1, 2, 3, 5}
+print('set2:',set2) # set2: {2, 4, 5, 11, 12, 13} # set2: {2, 4, 5, 11, 12, 13}
+
+set3=set1.symmetric_difference(set2) 
+
+print("After symm diff")
+
+print(set1) #{1, 2, 3, 5}
+print(set2) #{2, 4, 5, 11, 12, 13}
+print(set3) # {1, 3, 4, 11, 12, 13}
+
+
+print("Before symmetric  diff")
+
+set1={1,2,3,2,5} # 2,5 are duplicates
+set2={11,12,13,4,5,2}  #4,5 are duplicates
+
+
+print("Before symmetric diff")
+print('set1:',set1) # set1: {1, 2, 3, 5}
+print('set2:',set2) # set2: {2, 4, 5, 11, 12, 13}
+
+
+
+set3.symmetric_difference_update(set1)
+print("After symmetric diff")
+print(set1) # {1, 2, 3, 5}
+print(set2) # {2, 4, 5, 11, 12, 13}
+print(set3) #{1, 2, 3, 4, 5, 6, 7}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,448 @@
+
+Python chapters 1 to 4:
+ 
+		Indentaion:
+			White spaces or Tabs at the begining of the code line.
+			Indentaion used to indicate block of code.
+			
+			Program1:
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Hello world")
+  print("Welcome to python")
+if(2>4):
+    print("If section")
+    print("True part")
+else:
+    print("Else section")
+    print("False part")
+    if(4>1):
+        print("Else true part")
+
+ Error:
+   File "<string>", line 4
+    print("Welcome to python")
+    ^
+    IndentationError: unexpected indent 
+	
+	
+	Program2: comments
+	Comments are used to explain the code
+	
+	   # single line comments
+	   '''                          '''  -- Multi line comment
+	   
+	   Program 2:
+	    
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+# Enter the length
+length=int(input("Enter the length:"))
+breadth=int(input("Enter the breadth:"))
+
+'''
+ This program to find out the area of rect
+'''
+
+print("Area is:",length * breadth)
+
+Output:
+  Enter the length:5
+  Enter the breadth:6
+  Area is: 30
+  
+  
+  Chapter 2: Data Types
+  
+    Numeric:  int,float,complex
+	Boolean: True /False
+	Text :    str
+	Sequence:  list,tuple,range
+	Mapping type: Dict 
+	set types: set, frozenset
+	Binary types: Bytes,bytearray,memory view
+	
+	Get data type of vairable
+	  type(variable_name)
+	  
+	  
+	  int: +/- without decimal unlimited length
+	  float: +/- with deciaml unlimited after decimal
+	  
+	  prog 3:
+	   # Online Python compiler (interpreter) to run Python online.
+       # Write Python 3 code in this online editor and run it.
+       a=555559292929292929292292922 #unlimited lenth
+       b=56.78   # unlimited decimal length
+       c=3+4j
+       d=5+8j
+
+       print(a+2)
+       print(b+0.09)
+       print(c+d)
+
+       print("a type is :",type(a),"b type is :",type(b),"d type is :",d)
+	  
+	  output:
+	   555559292929292929292292924
+       56.870000000000005
+       (8+12j)
+       a type is : <class 'int'> b type is : <class 'float'> d type is : (5+8j) 
+	   
+	   Boolean:
+	     Expression evaulated ,True/False
+		 # Online Python compiler (interpreter) to run Python online.
+         # Write Python 3 code in this online editor and run it.
+         if(0.5): # 0,0.0,'' - False
+            print("Hello")
+         else:
+			print("Hi")
+    
+        if(False):
+			print("Hello1")
+		else:
+			print("Hi2")
+			
+
+Variables:
+  			No declaration of variable.
+			Variable created , assigned that value
+			x=5
+			y="python"
+			
+			
+			Variable binding
+			  x=5  x is variable binded to Int (class int) object i.e 5
+			  y="python" : y is a variable binded to string(class str) object i.e "Python"
+			  
+			  Variable type can be changed  in middle
+			    x=5
+				x=""python"
+				
+				Binding:
+				 a=5  a is binded to 5 class object
+				 b=6  b is binded 6 class object
+				 a=7  a is binded to 7 object and rebinded to 7 with 5 class object  -  5 is also in memory
+				 a=b  a is rebinded to b=6
+				 
+	Type casting:
+         Data type of variable can be specify by type casting
+   
+   
+   Program: 
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+x=str(5)
+y=int(5)
+z=float(5)
+
+print("str is:",x,"int is:",y,"float is:",z)
+
+Output:
+  str is: 5 int is: 5 float is: 5.0
+Type of str: <class 'str'> int type is: <class 'int'> float type is: 5.0
+
+print("Type of str:",type(x),"int type is:",type(y),"float type is:",z)   
+				 
+
+Assigning values to variables:
+   Multiple variables and multiple values in single line :
+       a,b,c=4,5,6
+       print(a,b,c) --> 4,5,6
+
+
+Prog1:
+
+a,b,c,d=4,5,6
+print(a,b,c)
+
+Output:
+ Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ValueError: not enough values to unpack (expected 4, got 3)
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+
+One value to multiple variables
+Prog 2:
+a,b,c=4,5,6
+
+print(a,b,c)
+
+a=b=c=6
+print(a,b,c)
+
+Output: 
+  4 5 6
+  6 6 6
+
+
+Prog3:
+  Allocate collection items to variables
+    Unpack collections like list,tuples items into variables
+
+  Prog:
+   list1=[4,5,6]
+a,b,c,d=list1
+
+print(a,b,c)
+  OR
+list1=[4,5,6,7]
+a,b,c=list1
+
+print(a,b,c)
+
+Output:
+"
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+ValueError: not enough values to unpack (expected 4, got 3)
+
+ String Concatination:
+   print("python"+"is a programming lang")  -- pythonis a programming lang
+   print("python","is a programming lang")  - Default space ( python is a programming lang
+"
+  
+	 			 
+				 Program:
+				   a=4
+b=5
+c=6
+
+print(a,b,c)
+
+a="python"
+b="is a programming language"
+
+print(a,b)
+
+Output:
+  python is a programming language
+
+
+GLOBAL:
+  local variabels: Life and scope within that function
+  Global      : Outside of the function
+
+Prog:
+
+  # Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+a=5
+
+def fun():
+    a=6
+    print("inside function",a)
+
+fun()
+print("Outside function",a)
+
+"
+
+Output:
+ inside function 6
+Outside function 5
+> 
+ prog2:
+ 
+"
+def fun():
+    global a
+    a=6
+    print("inside function",a)
+
+fun()
+print("Outside function",a)
+"
+
+
+Prog 3:
+ 
+a=5
+
+def fun():
+    global a
+    print("Inside function 1",a)
+    a=6
+    print("inside function 2",a)
+
+fun()
+print("Outside function",a)
+
+Output: 
+ Inside function 1 5
+inside function 2 6
+Outside function 6
+
+Prog3:
+
+"a=5
+
+def fun1():
+    global a
+    print("Inside function 1",a)
+    a=6
+    print("inside function 2",a)
+
+def fun2():
+    print("Inside fun2",a)
+    
+fun1()
+print("Outside function",a)
+fun2()
+"
+
+Inside function 1 5
+inside function 2 6
+Outside function 6
+Inside fun2 6
+
+ Why global keyword even outside function declared the variable:
+  If the global variable need the modification and modified one to be used in other function.
+
+
+Operators:
+  operators are used to perform operation on variables or values
+    1. Arithmetic
+    2. Comparsion
+    3. Logical
+    4. Bitwise
+    5. Assignment operators
+    6. Identity operators
+    7. Membership operators
+
+ 
+Arithmetic:
+  Addition a+b
+ Sub       a-b
+ Mul       a*b
+ Div       a/b
+ exp       a**b
+
+ Modulus: %
+   7/2  - int(7/2) --- 3
+           %        ---- 1
+
+ Prog:
+a=23
+b=4
+
+print("Division1: ",a/b)
+print("Division: ",int(a/b))
+print("Mod:",a%b)
+
+print("Floor: ",a//b)  #floor 5 actual 5.75 ceil:6
+
+a=3
+b=2
+
+print("Exp: ",a**b)
+
+Output: 
+ Division1:  5.75
+Division:  5
+Mod: 3
+Floor:  5
+Exp:  9
+
+
+Comparision operators:
+  == Equal
+  != Not Equal
+  > - Greater
+  < - smaller
+  >=  Greaterthan and equal
+ <= smaller and equal
+
+a=5
+b=5
+
+print(a==b)
+
+if(a==b):
+    print("a and b contents are same")
+else:
+    print("a and b contents are not same")
+
+ Output:
+  a and b contents are same
+
+Logical operators:
+  a=5
+b=6
+x=10
+y=11
+
+if(a>b  and  x>y  or a<x):
+    print("True part")
+else:
+    print("False part")
+    
+    # a<b and x<y - True
+    # a>b and x<y - False
+    # a>b or x<y  - True
+    # a>b  and  x<y or a<x - True
+    # 
+
+ Output:
+  False part
+
+Identity Operators:
+  x is y
+  x is not y
+
+
+Prog:
+x=5
+y=5
+print(x is y)
+print(x is not y)
+if(x is y):
+    print("x and y are binded to same int object")
+else:
+    print("x and y are not binded to same int object")
+
+Output:
+ True
+False
+x and y are binded to same int object
+
+ 
+Bitwise operators:
+
+  a=5
+b=6
+
+print("amd operation:",a&b)
+print("or operation:",a|b)
+
+print("Xor operation:",a^b)
+
+print("Inversion:",~a)
+
+
+print("2 LS by 3 times:",2<<3)
+print("30 RS by 3",30>>3)
+
+Output:
+  amd operation: 4
+or operation: 7
+Xor operation: 3
+Inversion: -6
+2 LS by 3 times: 16
+30 RS by 3 3
+
+ 
+
+
+
+
+ 
+				 
+			
+			
+			  

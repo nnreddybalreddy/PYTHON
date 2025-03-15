@@ -1,0 +1,801 @@
+
+
+Relation operators:
+  a==b
+  a<b
+  a<=b
+  a>b
+  a>=b
+  a!=b
+  
+  Simple IF statements:
+   if(cond):
+      statements
+   else:
+      statements
+
+ a=5
+b=6
+
+if(a<b):
+    print("This is IF block")
+print("This is python programming")
+
+ Output:
+ This is IF block
+This is python programming
+
+
+ if-else:
+   if(cond):
+     statments
+   else:
+     statments
+
+
+a=5
+b=6
+
+if(a<=b):
+    print("This is if block")
+    print("This is true part")
+else:
+    print("This is else block")
+    
+print("Python programming lang")    
+
+Output:
+  This is if block
+This is true part
+Python programming lang
+
+
+  if-else-if
+    # Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+num= int(input("Enter the num in range of 1 to 5:") )
+
+if(num==1):
+    print("one")
+elif(num==2):
+    print("two")
+elif(num==3):
+    print("Three")
+elif(num==4):
+    print("Four")
+elif(num==5):
+    print("Five")
+else:
+    print("Entered num in range of 1 to 5")
+    
+print("Done")    
+
+    
+    
+
+ Output:
+  Enter the num in range of 1 to 5:4
+Four
+Done
+
+
+
+ Sequential Decision making:
+   All related conditional statements will be executed
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+num= int(input("Enter the num in range of 1 to 5:") )
+
+if(num==1):
+    print("one")
+if(num==2):
+    print("two")
+if(num==3):
+    print("Three")
+if(num==4):
+    print("Four")
+if(num==4):
+    print("Five")
+    
+print("Done")    
+
+    
+    Output:
+     Enter the num in range of 1 to 5:4
+     Four
+    Five
+    Done
+
+	Diff between Multiway to Sequential:
+	  Prog:
+	   print("MultiWay")
+num= int(input("Enter the num in range of 1 to 5:") )
+
+if(num==1):
+    print("one")
+elif(num==2):
+    print("two")
+elif(num==3):
+    print("Three")
+elif(num==4):
+    print("Four")
+elif(num==5):
+    print("Five")
+else:
+    print("Entered num in range of 1 to 5")
+    
+print("Done")   
+
+print("Sequential")
+num= int(input("Enter the num in range of 1 to 5:") )
+
+if(num==1):
+    print("one")
+if(num==2):
+    print("two")
+if(num==3):
+    print("Three")
+if(num==4):
+    print("Four")
+if(num==4):
+    print("Five")
+    
+print("Done")   
+
+
+
+Output:
+ Enter the num in range of 1 to 5:4
+Four
+Done
+Enter the num in range of 1 to 5:4
+Four
+Five
+Done
+
+
+Nested IF statement:
+
+
+num=int(input("Enter the num:"))
+
+if(num>=0):
+    if(num>=10):
+        if(num>20):
+            print("Number greater than 20")
+        print("Number greater than 10 ")
+    else:
+        print("Number less than 10")
+else:
+    print("number less than 10")
+
+ Output:
+  Enter the num:25
+Number greater than 20
+Number greater than 10
+
+Compound:
+      
+num=int(input("Enter the num:"))
+if(num>=0 and num <=10):
+    print("Num is less than equal 10")
+else:
+    print("num may be less than 10 or greater than 10")
+
+Output:
+  Enter the num:15
+num may be less than 10 or greater than 10
+
+  e1      e2    e1 and e2            e1 or e2     not e1
+  F       F        F                   F           T           
+  F       T        F                   T           T
+  T       F        F                   T           F
+  T       T        T                   T           T
+
+ Priotity:
+  num=int(input("Enter the string:"))
+
+if(not num<=0 or num >=10):
+    print("Num greater 0 and less than or equal 10")
+else:
+    print("Num less than 0 or greater than 10")
+
+ Output: 
+  Enter the string:5
+Num greater 0 and less than or equal 10
+
+  Input 15:    not num<=0 or num <=10 
+               not  F  or 
+               T or  == Equal True. No need of second evaluation
+
+   (not (num<=0 or num >=10)) :  Input 15
+          not  (F  or T)     :   not true- false
+
+   (not (num<=0 or num <=10)) : input 15
+            not (F or F) -  T
+
+   (not (num<=0 or num <=10): input -2
+        not ( T   or  ) -- Not True - False (no need of evaluation)
+
+  not num<=0 or num>=10 and num>=20 : 25
+    not   F  or 
+   T  or ------------------ True
+
+  
+ not num<=0 or num>=10 and num>=20  : -2
+ F  or    F  and 
+
+ F or F  - F
+
+ for Or:  First condition is TRUE no need to check 2nd condition
+ For AND : if first condition is False , no need to check 2nd condition
+
+  NOT , AND , OR
+
+  Conditional Statements:
+   a=1
+b=2
+c=3
+big=a if(a>b and a>c) else b if(b>c) else c 
+
+print(big) ----3 
+
+a=6
+b=7
+c=8
+d=9
+e=10
+
+c=d if(a!=b) else e
+
+print(c)  --9
+
+
+
+ Strings:
+  Group of characters
+
+  ' ' or "  " (single quotes) or Double Quotes
+
+  strings are arrays-- 
+  
+  str='Python'
+        str[0] - P
+        str[1] - y
+        str[2] -t
+        str[3[ - h
+        str[4]- o
+        str[5]- n
+
+  Prog:
+  s="python"
+
+print("len of string:",len(s))
+
+print(s[0])
+print(s[1])
+print(s[2])
+print(s[3])
+print(s[4])
+print(s[5])
+#print(s[6])
+
+
+print("string: ",s)
+
+  len of string: 6
+p
+y
+t
+h
+o
+n
+string:  python
+> 
+
+#print(s[6])
+
+  Error:
+      Out of range:
+             Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+IndexError: string index out of range
+
+ Iteration:
+  s="python"
+
+print("len of string:",len(s))
+
+for i in range(0,len(s)):
+    print(s[i],end='')
+    
+
+print()
+print("----------------------")    
+for i in s:
+    print(i)
+
+ Output:
+  len of string: 6
+python
+----------------------
+p
+y
+t
+h
+o
+n
+> 
+
+
+ Slicing is used to range the characters by using Index:
+   Prog 3:
+  # Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+s="Python"
+'''
+   P      y      t     h     o     n
+   0      1      2     3     4     5
+   
+   
+'''
+print(s[1:3])  # 3 excluded    yt
+print(s[2:5])  #tho
+
+print(s[:4])  #pyth   - from starting to 4
+print(s[2:])  #thon   - From 2 to end
+
+
+print(s[1:5:2])    #  yh  1 to 5 insteps of 2
+
+
+s="Python Programming"
+
+'''
+-18 -17 -16 -15 -14  -13   -11  -10  -9 -8  -7  -6  -5 -4  -3    -2  -1
+P  y   t   h   o    n      P   r   o   g    r   a   m   m   i     n   g
+0  1   2  3   4     5  6   7   8   9  10    11 12  13  14  15   16   17
+
+'''
+
+
+print(s[1:15:2]) # y h n P o r m 
+print(s[1:15:3])  # y  o  P  g   m
+
+print(s[:15:3])   # starting  p  h   o   a
+
+print(s[2::3])   #t n r r m g
+
+
+print("-ve Indexing")
+print(" ")
+
+print(s[1:15:2])
+
+print(s[-17:-4:2])
+
+print(s[1:-4:2])
+
+
+
+
+    
+Output: 
+  yt
+tho
+Pyth
+thon
+yh
+yhnPorm
+yoPgm
+Ph oa
+tnrrmg
+-ve Indexing
+ 
+yhnPorm
+yhnPorm
+yhnPorm
+> 
+
+
+
+Python string Membership: 
+  s="Python is a easy programming language"
+
+if("easy" in s):
+    print("substring is present in main string")
+else:
+    print("substring is not present in main string")
+    
+
+if("xyz" not in s):
+    print("substring is not present in main string")
+else:
+    print("substring is present in main string")
+
+  Output:
+   substring is present in main string
+   substring is not present in main string
+
+String Functions:
+  
+s="python"
+
+print("upper :",s.upper())
+print("original:", s)
+
+s="PYTHON"
+print("lower :",s.lower())
+print("Original:", s)
+
+
+s="    python   "
+
+print("stripping the string: ",s.strip()) #remove beginig and ending spaces
+print("Original:", s)
+
+s="Python P"
+
+print("Replacing string:",s.replace("P","N"))
+print("Original:", s)
+
+
+s="python,    programming,language"
+
+print("split with ,:",s.split(','))
+print("Original:", s)
+
+s="Python Programming language"
+
+print("split with ,:",s.split(' '))
+print("Original:", s)
+
+
+print("split with p:",s.split('P'))
+print("Original:", s)
+
+
+ Indexing Place Holders:
+   Combining string and number is not possible directly.
+   format() method can combine both directly
+
+   It will take parameters which are passed and convert into string and place them in place holders {}.
+
+   n=3
+
+s="python {}"
+
+print(s.format(n))
+print("Original: ",s)
+
+s="{} python "
+print(s.format(n))
+
+Multiple Placeholders:
+  m=3
+n=2
+
+s="python {}.{}"
+
+print(s.format(n,m))
+print("Original: ",s)
+
+Output: 
+ python 2.3
+  Original:  python {}.{}
+
+Indexed Multiple Placeholders:
+  
+m=3
+n=2
+
+s="python {1}.{0}{2}"
+
+print(s.format(m,n,5))
+print("Original: ",s)
+
+ Output: 
+  python 2.35
+Original:  python {1}.{0}{2}
+
+
+Loops:
+  while loop:
+   
+print("Definite loop")
+
+i=1
+
+while(i<=10):
+    print(i)
+    i=i+1
+    
+i=1
+print("Indefinite loop")
+m=int(input("Enter number:"))
+
+while(i<=m):
+    print(i)
+    i=i+1
+
+
+ range Function:
+    range(start,end,step)
+
+ start:  default 0 .
+ end  : Mandatory (But excluded from condition)
+ step: default is 1. increment/decrement
+
+
+Prog4:
+ for i in range(1,10):   
+    print(i,end=' ')
+    
+print()   
+#0 to 10 in steps of 1. No need of 0 and 1 at start and begin
+
+#for i in range(0,10,1):
+for i in range(10):
+    print(i,end=' ')
+    
+#Odd numbers
+
+print()
+print("Odd numbers")
+
+for i in range(1,10,2):
+    print(i,end=' ')
+
+print()
+print("Even numbers")
+
+for i in range(0,10,2):
+    print(i,end=' ')
+
+print()
+print("Dec order")
+
+for i in range(20,10,-2): #20 to 10 decrement by 2 
+    print(i,end=' ')
+
+print()
+for i in range(1,2): #1<2 so only 1 will print 
+    print(i,end=' ')
+    
+print()
+for i in range(1,-1):  #start number is bigger than end number. So condition fail. No print
+    print(i,end=' ')
+
+print()
+for i in range(0): #0<0 is the condition fails. No print.
+    print(i,end=' ')
+
+Output:
+ 
+1 2 3 4 5 6 7 8 9 
+0 1 2 3 4 5 6 7 8 9 
+Odd numbers
+1 3 5 7 9 
+Even numbers
+0 2 4 6 8 
+Dec order
+20 18 16 14 12 
+1 
+
+
+
+While and For Loop:
+ i=1 
+while(i<=10):
+    print(i,end=' ')
+    i=i+1
+
+print()
+print("for loop")
+
+for i in range(1,11):
+    print(i,end=' ')
+
+Output:
+  1 2 3 4 5 6 7 8 9 10 
+for loop
+1 2 3 4 5 6 7 8 9 10 
+
+ For loop in strings:
+  s=input("Enter the string:")
+
+for i in s:
+    print(i,end=' ')
+
+ Output: N a r e n d r a 
+
+Prog2:
+  s=input("Enter the string:")
+
+for i in s:
+    print('[',i,']',end=' ')
+  Output:
+   Enter the string:
+Python
+[ P ] [ y ] [ t ] [ h ] [ o ] [ n ] 
+
+
+
+while-else and for-else
+ if condition fails in while/for loop the else part comments are excluded in the output.
+ if loop terminated normally , else block executes. 
+ If loop terminated abnormally(break), else block is not exeuctes.
+
+  i=1 
+sum=0
+num=int(input("Enter the number"))
+
+while(i<=num):
+    sum=sum+i 
+    if(i==6):
+        break;
+    i=i+1 
+else:
+    avg=float(sum/num)
+    print(sum)
+    print(avg)
+    
+i=1
+sum=0 
+
+num=int(input("Enter the number"))
+for i in range(1,num+1):
+    sum=sum+i 
+else:
+    avg=float(sum/num)
+    print(sum)
+    print(avg)
+
+Output:
+  Enter the number
+7       ( Abnoramlly terminated) 
+Enter the number
+4
+10
+2.5
+
+
+Mutliplication table:
+ 
+for i in range(1,11):
+    for j in range(1,11):
+        print('{0:4}'.format(i*j),end=' ')
+    
+    print()   
+
+#'{0:4}'.format*i*j
+
+   1    2    3    4    5    6    7    8    9   10 
+   2    4    6    8   10   12   14   16   18   20 
+   3    6    9   12   15   18   21   24   27   30 
+   4    8   12   16   20   24   28   32   36   40 
+   5   10   15   20   25   30   35   40   45   50 
+   6   12   18   24   30   36   42   48   54   60 
+   7   14   21   28   35   42   49   56   63   70 
+   8   16   24   32   40   48   56   64   72   80 
+   9   18   27   36   45   54   63   72   81   90 
+  10   20   30   40   50   60   70   80   90  100 
+
+
+
+Prime Numbers:
+
+ from math import sqrt
+print(sqrt(3.14))
+
+n1=int(input("Enter the number1"))
+n2=int(input("Enter the number2"))
+
+flag=1
+for n in range(n1,n2+1):
+    flag=1
+    p=int(sqrt(n))
+    for t in range(2,p):
+        if(n%t==0):
+            flag=0 
+            break;
+    
+    if(flag==1):
+        print(n,end=' ')
+
+Output:
+ 1.772004514666935
+Enter the number1
+2
+Enter the number2
+20
+2 3 4 5 6 7 8 9 11 13 15 17 19 
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+
+
+from math import sqrt
+
+s=input("Enter the string")
+vowels=0 
+consonents=0
+
+for i in s:
+    if((i=='i' or i=='e' or i=='o' or i=='u' or i=='a') or (i=='A' or i=='E' or i=='I' or i=='O' or i=='U')):
+        vowels=vowels+1 
+    elif((i>='a' and i<='z') or (i>='A' and i<='Z')):
+        consonents=consonents+1 
+        
+print(vowels)
+print(consonents)
+
+Output:
+  Enter the string
+aeiou BCDGH
+5
+5
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+
+Tree:
+ 
+n=int(input("Enter any num:"))
+
+for i in range(0,n): # o to 7 i.e 7 counts
+    for s in range(1,n-i):  # spaces for 6,5,4,3,2,1,0 for 1,3,5,7,9,11,13 stars
+        print(" ",end=' ')
+    
+    for j in range(1,2*i + 2): # 1 , 3, 5,7,9.11.13 stars
+        print("*",end=' ')
+    
+    print()    
+
+ Output:
+  Enter any num:
+7
+            * 
+          * * * 
+        * * * * * 
+      * * * * * * * 
+    * * * * * * * * * 
+  * * * * * * * * * * * 
+* * * * * * * * * * * * * 
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+   
+  
+   
+  
+
+
+
+        
+       
+
+
+
